@@ -1,0 +1,36 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /app
+# permissions:
+#   - object:
+#     pattern:
+#     except:
+#     owner:
+#     group:
+#     mode: 
+#     acls:
+#       -
+#     context:
+#       user:
+#       type:
+#       range:
+#     type:
+#       -
+hooks:
+  #  ApplicationStop:
+  #    - location: deployment.sh
+  #      timeout: 180
+  # BeforeInstall:
+  #   - location: deployment.sh
+  #     timeout: 180
+  # AfterInstall:
+  #   - location: deployment.sh
+  #     timeout: 180
+  ApplicationStart:
+    - location: deployment.sh
+      timeout: 600
+  # ValidateService:
+  #   - location: deployment.sh
+  #     timeout: 180
