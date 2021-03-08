@@ -15,8 +15,8 @@ phases:
       # - aws s3 cp s3://${DeployBucket}/.env ./.env
       - ls -a
       # - aws ecr get-login --region ap-south-1 --no-include-email | docker login --username AWS --password-stdin 652388285849.dkr.ecr.ap-south-1.amazonaws.com
-      - docker build -t inventchat:${IMAGE_TAG} -f Dockerfile .
-      - docker tag inventchat:${IMAGE_TAG} ${ECR}:${IMAGE_TAG}
+      - docker build -t abc:${IMAGE_TAG} -f Dockerfile .
+      - docker tag abc:${IMAGE_TAG} ${ECR}:${IMAGE_TAG}
       # $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
